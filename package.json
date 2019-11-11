@@ -38,5 +38,6 @@
   "bugs": {
     "url": "https://github.com/Basima1994/expressProject/issues"
   },
-  "homepage": "https://github.com/Basima1994/expressProject#readme"
+  "homepage": "https://github.com/Basima1994/expressProject#readme",
+  "license": "ISC"
 }
