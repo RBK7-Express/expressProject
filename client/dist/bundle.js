@@ -91,10 +91,17 @@
 	        "div",
 	        null,
 	        _react2.default.createElement(
-	          "h1",
+	          "h3",
 	          null,
-	          "this is a test example"
-	        )
+	          "What Others are Saying"
+	        ),
+	        _react2.default.createElement("hr", null),
+	        _react2.default.createElement(
+	          "h5",
+	          null,
+	          "number of reviews reviews"
+	        ),
+	        _react2.default.createElement("hr", null)
 	      );
 	    }
 	  }]);

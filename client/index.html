@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-          
-    </head>
-    <body >
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0 20%;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+      }
 
-        <!-- <div id="photoG"></div>
+      li {
+        float: left;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 17px;
+      }
+
+      li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: rgb(255, 255, 255);
+      }
+      #foot {
+        width: 100%;
+      }
+      #space {
+        background: white;
+        width: 100%;
+        height: 360px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="../nav.PNG" />
+    <hr />
+    <div id="nav">
+      <ul>
+        <li><a href="#women">WOMEN</a></li>
+        <li><a href="#men">MEN</a></li>
+        <li><a href="#jeans">JEANS</a></li>
+        <li><a href="#new">NEW</a></li>
+        <li><a href="#sale">SALE</a></li>
+        <li><a href="#style">STYLE</a></li>
+        <li><a href="#labels">LABELS WE LOVE</a></li>
+        <li><a href="#giftings">GIFTING</a></li>
+      </ul>
+    </div>
+
+    <!-- <div id="photoG"></div>
         <div id="sideBar"></div> -->
-        <div id="review"></div>
-        <script src="./dist/bundle.js"></script>
-
-    </body>
+    <div id="review"></div>
+    <div id="space"></div>
+    <script src="./dist/bundle.js"></script>
+  </body>
+  <footer>
+    <img id="foot" src="../footer.PNG" />
+  </footer>
 </html>
