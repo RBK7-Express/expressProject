@@ -18,7 +18,7 @@ db.once("open", function() {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("client"));
-// const Item = require("./dataBase/db.js").Item;
+const Item = require("./dataBase/db.js").Item;
 
 app.get("/item", (req, res) => {
   Item.find({}).then(items => res.json(items));
