@@ -75,6 +75,11 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	// import React from "react";
+	
+	// var link = window.location.href;
+	// var id_ = substring(link.indexOf("/"));
+	
 	var Test = function (_React$Component) {
 	  _inherits(Test, _React$Component);
 	
@@ -87,21 +92,42 @@
 	  _createClass(Test, [{
 	    key: "render",
 	    value: function render() {
+	      var sty = {
+	        fontSize: "30px",
+	        fontFamily: "Lucida Sans Unicode"
+	      };
+	      var sty2 = {
+	        width: "31%",
+	        height: "350px",
+	        margin: "10px"
+	      };
 	      return _react2.default.createElement(
 	        "div",
 	        null,
 	        _react2.default.createElement(
-	          "h3",
+	          "center",
 	          null,
-	          "What Others are Saying"
+	          _react2.default.createElement(
+	            "h3",
+	            { style: sty },
+	            "What Others are Saying"
+	          )
 	        ),
 	        _react2.default.createElement("hr", null),
 	        _react2.default.createElement(
-	          "h5",
+	          "p",
 	          null,
 	          "number of reviews reviews"
 	        ),
-	        _react2.default.createElement("hr", null)
+	        _react2.default.createElement("hr", null),
+	        _react2.default.createElement(
+	          "p",
+	          null,
+	          "Most Recent Reviews"
+	        ),
+	        _react2.default.createElement("input", { style: sty2 }),
+	        _react2.default.createElement("input", { style: sty2 }),
+	        _react2.default.createElement("input", { style: sty2 })
 	      );
 	    }
 	  }]);

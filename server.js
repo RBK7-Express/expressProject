@@ -1,11 +1,11 @@
-const cool = require("cool-ascii-faces");
+// const cool = require("cool-ascii-faces");
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-
+// import Test from "./client/src/review/index.jsx";
 var app = express();
+// const pic = require("./nav");
 
-//
 const URI = require("./config/keys").mongooURI;
 mongoose.connect(URI, { useNewUrlParser: true });
 
@@ -23,6 +23,19 @@ const Item = require("./dataBase/db.js").Item;
 app.get("/item", (req, res) => {
   Item.find({}).then(items => res.json(items));
 });
+
+app.use("/:id", function(req, res, next) {
+  console.log("Request Type:", req.method);
+  next();
+});
+app.get("/:id", function(req, res, next) {
+  // var link = window.location.href;
+  // var id_ = substring(link.indexOf("/"));
+
+  res.send(Test);
+});
+
+// app.get("/:id", (req, res, next) => {});
 
 const port = process.env.PORT || 8000;
 app.listen(port, function() {
