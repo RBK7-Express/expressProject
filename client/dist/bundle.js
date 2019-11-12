@@ -105,6 +105,7 @@
 	        "div",
 	        null,
 	        _react2.default.createElement(
+
 	          "center",
 	          null,
 	          _react2.default.createElement(
@@ -128,6 +129,7 @@
 	        _react2.default.createElement("input", { style: sty2 }),
 	        _react2.default.createElement("input", { style: sty2 }),
 	        _react2.default.createElement("input", { style: sty2 })
+
 	      );
 	    }
 	  }]);
