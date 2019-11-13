@@ -33,7 +33,7 @@ app.get("/id", function(req, res) {
       console.log("Err", err);
     }
     console.log(data);
-    res.send(data);
+    res.status(200).send(data);
   });
   //next();
 });

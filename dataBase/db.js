@@ -15,7 +15,7 @@ var itemsSchema = mongoose.Schema({
 
 var itemsModel = mongoose.model("Item", itemsSchema);
 sample1 = new itemsModel({
-  id: 9,
+  id: 3,
   name: "shirt",
   price: "10JD",
   sizes: "xL , L, M",
