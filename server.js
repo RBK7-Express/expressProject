@@ -19,20 +19,23 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("client"));
 const Item = require("./dataBase/db.js").Item;
-
+const it = require("./dataBase/db.js");
 app.get("/item", (req, res) => {
   Item.find({}).then(items => res.json(items));
 });
 
-app.use("/:id", function(req, res, next) {
+app.get("/id", function(req, res) {
+  var d = req.query.id;
+  console.log(d);
   console.log("Request Type:", req.method);
-  next();
-});
-app.get("/:id", function(req, res, next) {
-  // var link = window.location.href;
-  // var id_ = substring(link.indexOf("/"));
-
-  res.send(Test);
+  Item.findOne({ id: d }, (err, data) => {
+    if (err) {
+      console.log("Err", err);
+    }
+    console.log(data);
+    res.send(data);
+  });
+  //next();
 });
 
 // app.get("/:id", (req, res, next) => {});

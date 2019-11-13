@@ -83,13 +83,40 @@
 	var Test = function (_React$Component) {
 	  _inherits(Test, _React$Component);
 	
-	  function Test() {
+	  function Test(props) {
 	    _classCallCheck(this, Test);
 	
-	    return _possibleConstructorReturn(this, (Test.__proto__ || Object.getPrototypeOf(Test)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Test.__proto__ || Object.getPrototypeOf(Test)).call(this, props));
+	
+	    _this.state = { id: "", reviews: "" };
+	    return _this;
 	  }
 	
 	  _createClass(Test, [{
+	    key: "componentDidMount",
+	    value: function componentDidMount() {
+	      var that = this;
+	      var path = window.location.href;
+	      var id_ = path.substring(path.indexOf("=") + 1);
+	      if (id_ === "") {
+	        id_ = 1;
+	      }
+	      console.log(id_);
+	      _jquery2.default.ajax({
+	        type: "GET",
+	        url: "127.0.0.1:8000/id/?id=" + that.state.id,
+	        data: { id: id_ },
+	        dataType: "application/json",
+	        success: function success(data) {
+	          that.setState({ id: data.id, reviews: data.reviews });
+	          console.log("DONE!");
+	        },
+	        error: function error(err) {
+	          console.log(err);
+	        }
+	      });
+	    }
+	  }, {
 	    key: "render",
 	    value: function render() {
 	      var sty = {
@@ -101,11 +128,11 @@
 	        height: "350px",
 	        margin: "10px"
 	      };
+	
 	      return _react2.default.createElement(
 	        "div",
 	        null,
 	        _react2.default.createElement(
-
 	          "center",
 	          null,
 	          _react2.default.createElement(
@@ -126,10 +153,21 @@
 	          null,
 	          "Most Recent Reviews"
 	        ),
-	        _react2.default.createElement("input", { style: sty2 }),
-	        _react2.default.createElement("input", { style: sty2 }),
-	        _react2.default.createElement("input", { style: sty2 })
-
+	        _react2.default.createElement(
+	          "p",
+	          { style: sty2 },
+	          this.state.reviews[0]
+	        ),
+	        _react2.default.createElement(
+	          "p",
+	          { style: sty2 },
+	          this.state.reviews[1]
+	        ),
+	        _react2.default.createElement(
+	          "p",
+	          { style: sty2 },
+	          this.state.reviews[2]
+	        )
 	      );
 	    }
 	  }]);
