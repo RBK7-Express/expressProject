@@ -156,21 +156,18 @@
 	        ),
 	        _react2.default.createElement(
 	          "p",
-	          { style: sty2 },
-	          this.state.reviews[0],
-	          " "
+	          null,
+	          this.state.reviews[0]
 	        ),
 	        _react2.default.createElement(
 	          "p",
-	          { style: sty2 },
-	          this.state.reviews[1],
-	          " "
+	          null,
+	          this.state.reviews[1]
 	        ),
 	        _react2.default.createElement(
 	          "p",
-	          { style: sty2 },
-	          this.state.reviews[2],
-	          " "
+	          null,
+	          this.state.reviews[2]
 	        )
 	      );
 	    }

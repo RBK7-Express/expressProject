@@ -56,9 +56,10 @@ class Test extends React.Component {
         <p>number of reviews reviews</p>
         <hr></hr>
         <p>Most Recent Reviews</p>
-        <p style={sty2}>{this.state.reviews[0]} </p>
-        <p style={sty2}>{this.state.reviews[1]} </p>
-        <p style={sty2}>{this.state.reviews[2]} </p>
+
+        <p>{this.state.reviews[0]}</p>
+        <p>{this.state.reviews[1]}</p>
+        <p>{this.state.reviews[2]}</p>
       </div>
     );
   }
