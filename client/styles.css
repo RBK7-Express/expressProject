@@ -33,7 +33,16 @@ li a:hover {
   height: 360px;
 }
 /* #photoG {
-    width: 30%;
-    height: 40%;
-    background: black;
-  } */
+  width: 30%;
+  height: 40%;
+  background: black;
+} */
+span {
+  display: inline-block;
+  font-size: 36px;
+  width: 31%;
+  height: 300px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid black;
+}

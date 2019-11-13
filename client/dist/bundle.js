@@ -88,7 +88,7 @@
 	
 	    var _this = _possibleConstructorReturn(this, (Test.__proto__ || Object.getPrototypeOf(Test)).call(this, props));
 	
-	    _this.state = { id: "", reviews: "" };
+	    _this.state = { id: "", reviews: [] };
 	    return _this;
 	  }
 	
@@ -155,19 +155,16 @@
 	          "Most Recent Reviews"
 	        ),
 	        _react2.default.createElement(
-	          "p",
+	          "div",
 	          null,
-	          this.state.reviews[0]
-	        ),
-	        _react2.default.createElement(
-	          "p",
-	          null,
-	          this.state.reviews[1]
-	        ),
-	        _react2.default.createElement(
-	          "p",
-	          null,
-	          this.state.reviews[2]
+	          this.state.reviews.map(function (item, i) {
+	            return _react2.default.createElement(
+	              "span",
+	              { className: "span", key: i },
+	              "\u2605\u2605\u2605\u2605\u2605 ",
+	              item
+	            );
+	          })
 	        )
 	      );
 	    }

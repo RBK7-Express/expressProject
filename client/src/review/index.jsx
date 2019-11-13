@@ -9,7 +9,7 @@ import $ from "jquery";
 class Test extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { id: "", reviews: "" };
+    this.state = { id: "", reviews: [] };
   }
 
   componentDidMount() {
@@ -56,10 +56,19 @@ class Test extends React.Component {
         <p>number of reviews reviews</p>
         <hr></hr>
         <p>Most Recent Reviews</p>
+        <div>
+          {this.state.reviews.map((item, i) => {
+            return (
+              <span className="span" key={i}>
+                ★★★★★ {item}
+              </span>
+            );
+          })}
+        </div>
 
-        <p>{this.state.reviews[0]}</p>
+        {/* <p>{this.state.reviews[0]}</p>
         <p>{this.state.reviews[1]}</p>
-        <p>{this.state.reviews[2]}</p>
+        <p>{this.state.reviews[2]}</p> */}
       </div>
     );
   }
