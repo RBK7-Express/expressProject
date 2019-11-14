@@ -33,57 +33,55 @@ class Side extends React.Component {
           sizes: data.sizes,
           colors: data.colors
         });
-        console.log("DONE!");
       },
       error: function(err) {
-        console.log(err, "kjhsdkajs");
+        console.log(err);
       }
     });
   }
   render() {
     return (
       <div className="wholeProject">
+        {/* /////////Name section ///////// */}
         <div>
-          <p>{this.state.name}</p>
+          {" "}
+          <p>{this.state.name}</p>{" "}
         </div>
+        {/* /////////Price section ///////// */}
         <div className="price">
           <p>{this.state.price} </p>
         </div>
         <p>Buy 1, Get 1 50% Off</p>
-        <hr className="_3zd16" aria-hidden="true"></hr>
+        <hr></hr>
+        {/* /////////Size Fix section ///////// */}
         <div className="selectSize">
           <p>Select Size:</p> <button>regular</button> <button>tall</button>
         </div>
-        <p>{this.state.sizes} </p>
-        <p>Recommend My Size</p>
-
-        <button>Add to Bag</button>
-
-        <div className="AverDiv">
-          Average Fit based on
-          <span></span>
+        {/* /////////Size section ///////// */}
+        <div>
+          <p>{this.state.sizes} </p>
+          <p>Recommend My Size</p>
         </div>
 
-        <hr className="_3zd16" aria-hidden="true"></hr>
+        {/* add bag section  */}
+        <button className="bag">Add to Bag</button>
+        {/* Average Section  */}
 
-        <div className="accordion__item _8Oqf_ _3aW4w">
+        <div className="AverDiv"> Average Fit based on </div>
+        <hr></hr>
+        {/* Product Section */}
+        <div className="pro">
           <button className="proB">Product Details</button>
-          <div
-            id="accordion-panel-5ed3"
-            className="tryP"
-            aria-labelledby="accordion-tab-5ed3"
-            role="tabpanel"
-            aria-hidden="false"
-          >
-            {/* <div id="innerText">
+          <div className="tryP">
+            <div id="innerText">
               <p className="bodySecondary">
                 Your favorite casual tee now amped up with an unbelievably soft
                 fit and feel. The classic crew neck and hue make it extremely
                 versatile, so get ready to enjoy this one's all-day comfort all
                 year long.
               </p>
-            </div> */}
-            {/* <section id="test">
+            </div>
+            <section id="test">
               <div className="bob bodyPrimary">
                 <ul>
                   <li>Moisture-wicking</li>
@@ -95,15 +93,10 @@ class Side extends React.Component {
                   <li>Machine wash</li>
                 </ul>
               </div>
-            </section> */}
+            </section>
             <div className="Ywr0X">
               <span>
-                <button
-                  type="button"
-                  className="linkDark"
-                  tabIndex="0"
-                  title="men's Size Chart Button"
-                >
+                <button type="button" className="linkDark">
                   Size Chart
                 </button>
               </span>
@@ -111,75 +104,34 @@ class Side extends React.Component {
           </div>
         </div>
         <hr></hr>
+        {/* shipping section */}
 
-        {/* <div className="accordion__item _8Oqf_ _3aW4w">
-          <button
-            className="shBut"
-            type="button"
-            aria-controls="accordion-panel-ff0d"
-            aria-expanded="true"
-            role="tab"
-            id="accordion-tab-ff0d"
-            aria-selected="false"
-            aria-label="Shipping and Returns"
-          >
-            Shipping and Returns
-          </button>
-          <div
-            id="accordion-panel-ff0d"
-            className="try"
-            aria-labelledby="accordion-tab-ff0d"
-            role="tabpanel"
-            aria-hidden="false"
-          >
+        <div>
+          <button className="shBut">Shipping and Returns</button>
+          <div className="try">
             <p className="shipP">
               We ship anywhere in the U.S. and to over 55 international
               destinations.
             </p>
-            <p className="bob bodyPrimary">
+            <p className="shipP">
               Everyday free standard shipping on orders $50+ placed online at
               Express.com for U.S. or Canada.
             </p>
-            <p className="bob bodyPrimary">
-              Simple Returns. Up to 60 days. Get the full details on{" "}
-              <a
-                className="linkDark"
-                title="Returns &amp; Exchanges"
-                href="/service/custserv.jsp?name=ReturnsMain"
-              >
+            <p className="shipP">
+              Simple Returns. Up to 60 days. Get the full details on
+              <a href="/service/custserv.jsp?name=ReturnsMain">
                 Returns &amp; Exchanges
               </a>
               . Excludes Final Sale items ending in .97 cents.
             </p>
-            <span></span>
           </div>
-        </div> */}
-
+        </div>
         <hr></hr>
 
         {/* avilability Section  */}
         <section className="Avilability">
-          <div className="avil">
-            <span className="avilabile">
-              <div className="avilDiv">
-                <span className="innerAvil">
-                  <span className="aviInnSp">
-                    <span className="check">
-                      Check Availability at Stores Near You
-                    </span>
-                    <button
-                      className="avilBut"
-                      type="button"
-                      aria-label="View product availability at other Express Stores"
-                      value="View product availability at other Express Stores"
-                    >
-                      Change Store
-                    </button>
-                  </span>
-                </span>
-              </div>
-            </span>
-          </div>
+          <span className="check">Check Availability at Stores Near You</span>
+          <button className="avilBut">Change Store</button>
         </section>
         <hr></hr>
         {/* gift section */}
@@ -196,15 +148,13 @@ class Side extends React.Component {
               Recipient can customize or exchange online
             </div>
           </span>
-        </div>
-        <div>
-          <br />
-          <br />
-          <br />
-          <br />
+          {/* <span className= "giftIcon">
+                 <a href="https://cdn4.iconfinder.com/data/icons/gift-5/200/577_gift-512.png" ></a> 
+                </span>                */}
         </div>
       </div>
     );
   }
 }
+// ReactDOM.render(<Side />, document.getElementById("sideBar"));
 export default Side;

@@ -71,12 +71,43 @@ li a:hover {
   margin-top: 120px;
   width: 97%;
 }
+/* ///// */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.leftcolumn {
+  float: left;
+  width: 65%;
+}
+#photos {
+  margin-top: -20%;
+}
+.wholeProject {
+  margin-top: -10%;
+  margin-right: 50%;
+  float: right;
+  position: right;
+  width: 50%;
+}
+* {
+  box-sizing: border-box;
+}
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 35%;
+  padding-left: 20px;
+  margin-bottom: 10%;
+}
 
 /* //////////// */
 .images {
   margin-left: 235px;
   margin-top: -256px;
-  margin-right: 250px;
+
+  width: 50px;
 }
 
 .text {
@@ -170,18 +201,9 @@ li a:hover {
 #enna {
   color: red;
 }
-
-.wholeProject {
-  float: right;
-  position: right;
+#photoBar {
+  width: 50%;
 }
-
-/* 
-
-.wholeProject{
-    position: right;
-
-} */
 
 .price {
   font-family: sans-serif;
@@ -194,7 +216,6 @@ li a:hover {
   position: relative;
   width: 100%;
   max-width: 100%;
-  /* letter-spacing: -.31em!important; */
   word-spacing: -0.43em !important;
   list-style-type: none;
   flex-wrap: wrap;
@@ -203,32 +224,6 @@ li a:hover {
   justify-content: flex-start;
 }
 .colorSection {
-  /* -webkit-font-smoothing: antialiased;
-box-sizing: inherit; */
-  /* margin: 0; */
-  /* direction: ltr; */
-  /* font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
-font-size: inherit; */
-  /* position: right;
-top: 1rem;
-right: -37.4rem;
-display: flex;
-width: -120px;
-height: -120px;
-flex-direction: row;
-padding: 1.5rem;
-background-color: #fff;
-box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,.2);
-transition: all .4s cubic-bezier(.72,-.03,.58,1) .1s; */
-  /* -webkit-font-smoothing: antialiased;
-direction: ltr;
-font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
-font-size: inherit;
-box-sizing: inherit;
-display: inline-flex;
-margin: .8rem 1rem .4rem;
-padding: 0;
-border-top: none; */
   -webkit-font-smoothing: antialiased;
   box-sizing: inherit;
   margin: 0;
@@ -236,37 +231,6 @@ border-top: none; */
   direction: ltr;
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   font-size: inherit;
-  /* float:left;
-    size :10px;
-    height:"2";
-     width:"2";
-     padding: 5px;
-    width:5px; */
-  /* -webkit-font-smoothing: antialiased;
-direction: ltr; */
-  /* font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
-font-size: inherit;
-box-sizing: inherit;
-display: block;
-flex: none; */
-  /* width: 5px;
-position: relative; */
-  /* -webkit-font-smoothing: antialiased;
-direction: ltr; */
-
-  /* box-sizing: inherit; */
-  /* overflow: hidden; */
-  /* height: 3.4rem;
-width: 3.4rem; */
-  /* margin: 0 auto; */
-  /* float :left; */
-  /* padding-bottom: calc(100% - .2rem);
-border: .1rem solid #d5d5d5;
-border-radius: .4rem;
-background-size: cover;
-display: block;
-/* background-position: 50%; */
-  /* background-image: url("https://images.express.com/is/image/expressfashion/0036_05051953_0625_s?cache=on&wid=30&hei=30&qlt=70&defaultImage=Photo-Coming-Soon"); */
 }
 
 .grid grid--bleed grid--direction-row grid--justify-start grid--wrap _3_xl8 {
@@ -369,4 +333,7 @@ display: block;
   height: 300px;
   margin: 10px;
   border: 1px solid black;
+}
+#sspann {
+  display: inline-block;
 }

@@ -93,9 +93,17 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        null,
-	        _react2.default.createElement(_photo2.default, null),
-	        _react2.default.createElement(_sideBar2.default, null),
+	        { className: "row" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "leftcolumn" },
+	          _react2.default.createElement(_photo2.default, null)
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "rightcolumn" },
+	          _react2.default.createElement(_sideBar2.default, null)
+	        ),
 	        _react2.default.createElement(_rev2.default, null)
 	      );
 	    }
@@ -33734,20 +33742,9 @@
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var images = [{
-	        url: "https://images.express.com/is/image/expressfashion/0036_05051953_0010_f?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
-	      }, {
-	        url: "https://images.express.com/is/image/expressfashion/0036_05051953_0010_f07?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
-	      }, {
-	        url: "https://images.express.com/is/image/expressfashion/0036_05051953_0010_f23?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
-	      }];
-	      // const img = [{"url": "https://images.express.com/is/image/expressfashion/0036_05051953_0010_f?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"}]
-	      // {this.state.imges.forEach((item, i) => {
-	      //    img[i]=item
-	      //   });}
 	      return _react2.default.createElement(
 	        "div",
-	        null,
+	        { id: "photos" },
 	        _react2.default.createElement("img", {
 	          id: "side",
 	          src: "https://images.express.com/is/image/expressfashion/0036_05051953_0010_f?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
@@ -34554,10 +34551,9 @@
 	            sizes: data.sizes,
 	            colors: data.colors
 	          });
-	          console.log("DONE!");
 	        },
 	        error: function error(err) {
-	          console.log(err, "kjhsdkajs");
+	          console.log(err);
 	        }
 	      });
 	    }
@@ -34570,11 +34566,13 @@
 	        _react2.default.createElement(
 	          "div",
 	          null,
+	          " ",
 	          _react2.default.createElement(
 	            "p",
 	            null,
 	            this.state.name
-	          )
+	          ),
+	          " "
 	        ),
 	        _react2.default.createElement(
 	          "div",
@@ -34591,7 +34589,7 @@
 	          null,
 	          "Buy 1, Get 1 50% Off"
 	        ),
-	        _react2.default.createElement("hr", { className: "_3zd16", "aria-hidden": "true" }),
+	        _react2.default.createElement("hr", null),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "selectSize" },
@@ -34614,31 +34612,34 @@
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "p",
+	          "div",
 	          null,
-	          this.state.sizes,
-	          " "
-	        ),
-	        _react2.default.createElement(
-	          "p",
-	          null,
-	          "Recommend My Size"
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            this.state.sizes,
+	            " "
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "Recommend My Size"
+	          )
 	        ),
 	        _react2.default.createElement(
 	          "button",
-	          null,
+	          { className: "bag" },
 	          "Add to Bag"
 	        ),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "AverDiv" },
-	          "Average Fit based on",
-	          _react2.default.createElement("span", null)
+	          " Average Fit based on "
 	        ),
-	        _react2.default.createElement("hr", { className: "_3zd16", "aria-hidden": "true" }),
+	        _react2.default.createElement("hr", null),
 	        _react2.default.createElement(
 	          "div",
-	          { className: "accordion__item _8Oqf_ _3aW4w" },
+	          { className: "pro" },
 	          _react2.default.createElement(
 	            "button",
 	            { className: "proB" },
@@ -34646,13 +34647,63 @@
 	          ),
 	          _react2.default.createElement(
 	            "div",
-	            {
-	              id: "accordion-panel-5ed3",
-	              className: "tryP",
-	              "aria-labelledby": "accordion-tab-5ed3",
-	              role: "tabpanel",
-	              "aria-hidden": "false"
-	            },
+	            { className: "tryP" },
+	            _react2.default.createElement(
+	              "div",
+	              { id: "innerText" },
+	              _react2.default.createElement(
+	                "p",
+	                { className: "bodySecondary" },
+	                "Your favorite casual tee now amped up with an unbelievably soft fit and feel. The classic crew neck and hue make it extremely versatile, so get ready to enjoy this one's all-day comfort all year long."
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "section",
+	              { id: "test" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "bob bodyPrimary" },
+	                _react2.default.createElement(
+	                  "ul",
+	                  null,
+	                  _react2.default.createElement(
+	                    "li",
+	                    null,
+	                    "Moisture-wicking"
+	                  ),
+	                  _react2.default.createElement(
+	                    "li",
+	                    null,
+	                    "Supersoft, stretch fabric"
+	                  ),
+	                  _react2.default.createElement(
+	                    "li",
+	                    null,
+	                    "Short sleeves; Straight hem"
+	                  ),
+	                  _react2.default.createElement(
+	                    "li",
+	                    null,
+	                    "Imported"
+	                  ),
+	                  _react2.default.createElement(
+	                    "li",
+	                    null,
+	                    "Crew neck, tagless"
+	                  ),
+	                  _react2.default.createElement(
+	                    "li",
+	                    null,
+	                    "Cotton/Modal/Spandex"
+	                  ),
+	                  _react2.default.createElement(
+	                    "li",
+	                    null,
+	                    "Machine wash"
+	                  )
+	                )
+	              )
+	            ),
 	            _react2.default.createElement(
 	              "div",
 	              { className: "Ywr0X" },
@@ -34661,12 +34712,7 @@
 	                null,
 	                _react2.default.createElement(
 	                  "button",
-	                  {
-	                    type: "button",
-	                    className: "linkDark",
-	                    tabIndex: "0",
-	                    title: "men's Size Chart Button"
-	                  },
+	                  { type: "button", className: "linkDark" },
 	                  "Size Chart"
 	                )
 	              )
@@ -34674,44 +34720,53 @@
 	          )
 	        ),
 	        _react2.default.createElement("hr", null),
+	        _react2.default.createElement(
+	          "div",
+	          null,
+	          _react2.default.createElement(
+	            "button",
+	            { className: "shBut" },
+	            "Shipping and Returns"
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "try" },
+	            _react2.default.createElement(
+	              "p",
+	              { className: "shipP" },
+	              "We ship anywhere in the U.S. and to over 55 international destinations."
+	            ),
+	            _react2.default.createElement(
+	              "p",
+	              { className: "shipP" },
+	              "Everyday free standard shipping on orders $50+ placed online at Express.com for U.S. or Canada."
+	            ),
+	            _react2.default.createElement(
+	              "p",
+	              { className: "shipP" },
+	              "Simple Returns. Up to 60 days. Get the full details on",
+	              _react2.default.createElement(
+	                "a",
+	                { href: "/service/custserv.jsp?name=ReturnsMain" },
+	                "Returns & Exchanges"
+	              ),
+	              ". Excludes Final Sale items ending in .97 cents."
+	            )
+	          )
+	        ),
 	        _react2.default.createElement("hr", null),
 	        _react2.default.createElement(
 	          "section",
 	          { className: "Avilability" },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "avil" },
-	            _react2.default.createElement(
-	              "span",
-	              { className: "avilabile" },
-	              _react2.default.createElement(
-	                "div",
-	                { className: "avilDiv" },
-	                _react2.default.createElement(
-	                  "span",
-	                  { className: "innerAvil" },
-	                  _react2.default.createElement(
-	                    "span",
-	                    { className: "aviInnSp" },
-	                    _react2.default.createElement(
-	                      "span",
-	                      { className: "check" },
-	                      "Check Availability at Stores Near You"
-	                    ),
-	                    _react2.default.createElement(
-	                      "button",
-	                      {
-	                        className: "avilBut",
-	                        type: "button",
-	                        "aria-label": "View product availability at other Express Stores",
-	                        value: "View product availability at other Express Stores"
-	                      },
-	                      "Change Store"
-	                    )
-	                  )
-	                )
-	              )
-	            )
+	            "span",
+	            { className: "check" },
+	            "Check Availability at Stores Near You"
+	          ),
+	          _react2.default.createElement(
+	            "button",
+	            { className: "avilBut" },
+	            "Change Store"
 	          )
 	        ),
 	        _react2.default.createElement("hr", null),
@@ -34737,14 +34792,6 @@
 	              "Recipient can customize or exchange online"
 	            )
 	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          null,
-	          _react2.default.createElement("br", null),
-	          _react2.default.createElement("br", null),
-	          _react2.default.createElement("br", null),
-	          _react2.default.createElement("br", null)
 	        )
 	      );
 	    }
@@ -34752,6 +34799,8 @@
 	
 	  return Side;
 	}(_react2.default.Component);
+	// ReactDOM.render(<Side />, document.getElementById("sideBar"));
+	
 	
 	exports.default = Side;
 

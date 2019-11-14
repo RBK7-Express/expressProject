@@ -34,26 +34,8 @@ class App extends React.Component {
     });
   }
   render() {
-    const images = [
-      {
-        url:
-          "https://images.express.com/is/image/expressfashion/0036_05051953_0010_f?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
-      },
-      {
-        url:
-          "https://images.express.com/is/image/expressfashion/0036_05051953_0010_f07?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
-      },
-      {
-        url:
-          "https://images.express.com/is/image/expressfashion/0036_05051953_0010_f23?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
-      }
-    ];
-    // const img = [{"url": "https://images.express.com/is/image/expressfashion/0036_05051953_0010_f?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"}]
-    // {this.state.imges.forEach((item, i) => {
-    //    img[i]=item
-    //   });}
     return (
-      <div>
+      <div id="photos">
         <img
           id="side"
           src="https://images.express.com/is/image/expressfashion/0036_05051953_0010_f?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
