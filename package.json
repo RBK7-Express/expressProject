@@ -21,7 +21,12 @@
     "mongoose": "^5.7.8",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "request": "^2.75.0"
+    "request": "^2.75.0",
+    "react-gesture-gallery": "^1.1.0",
+    "react-image-magnifiers": "^1.2.1",
+    "react-image-slider": "^0.1.0",
+    "react-responsive-carousel": "^3.1.51",
+    "react-simple-image-slider": "^1.0.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.6.3",

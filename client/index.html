@@ -10,7 +10,7 @@
       src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
       crossorigin
     ></script>
-    <Link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <style></style>
   </head>
   <body>
@@ -30,11 +30,16 @@
       </ul>
     </div>
 
-    <div id="photoG"></div>
-    <div id="sideBar"></div>
+    <div id="app"></div>
+    <script>
+      $(".proB").click(function() {
+        $(".tryP").toggle();
+      });
 
-    <div id="review"></div>
-    <!-- <div id="space"></div> -->
+      $(".shBut").click(function() {
+        $(".try").toggle();
+      });
+    </script>
     <script src="./dist/bundle.js"></script>
   </body>
   <footer>
