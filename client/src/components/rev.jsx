@@ -22,7 +22,7 @@ class Test extends React.Component {
     console.log(id_);
     $.ajax({
       type: "GET",
-      url: "http://127.0.0.1:8000/id/?id=" + that.state.id,
+      url: "/id/?id=" + that.state.id,
       data: { id: id_ },
       // dataType: "application/json",
       success: function(data) {

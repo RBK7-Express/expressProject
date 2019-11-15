@@ -22973,7 +22973,7 @@
 	      console.log(id_);
 	      _jquery2.default.ajax({
 	        type: "GET",
-	        url: "http://127.0.0.1:8000/id/?id=" + that.state.id,
+	        url: "/id/?id=" + that.state.id,
 	        data: { id: id_ },
 	        // dataType: "application/json",
 	        success: function success(data) {
@@ -33744,7 +33744,7 @@
 	      console.log(id_);
 	      _jquery2.default.ajax({
 	        type: "GET",
-	        url: "http://127.0.0.1:8000/id/?id=" + that.state.id,
+	        url: "/id/?id=" + that.state.id,
 	        data: { id: id_ },
 	        //   dataType: "application/json",
 	        success: function success(data) {
@@ -34566,7 +34566,7 @@
 	      console.log(id_);
 	      _jquery2.default.ajax({
 	        type: "GET",
-	        url: "http://127.0.0.1:8000/id/?id=" + that.state.id,
+	        url: "/id/?id=" + that.state.id,
 	        data: { id: id_ },
 	        success: function success(data) {
 	          that.setState({
