@@ -5,8 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "dev-react": "webpack -d --watch"
+    "start": "node server.js",
+    "dev-react": "webpack -d --watch",
+    "build": "webpack -p --config ./webpack.config.js --watch --display-error-details",
+    "watch": "webpack -d --watch --config ./webpack.config.js --display-error-details",
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js"
   },
   "keywords": [],
   "author": "",

@@ -16,8 +16,11 @@ class Main extends React.Component {
         <div className="rightcolumn">
           <Side />
         </div>
-
-        <Test />
+        <div id="mine">
+          <br />
+          <br />
+          <Test />
+        </div>
       </div>
     );
   }
