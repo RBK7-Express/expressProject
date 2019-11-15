@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-          
-    </head>
-    <body >
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <img src="https://i.imgur.com/B4aTyHS.png" />
 
-        <!-- <div id="photoG"></div>
-        <div id="sideBar"></div> -->
-        <div id="review"></div>
-        <script src="./dist/bundle.js"></script>
+    <hr />
+    <div id="nav">
+      <ul>
+        <li><a href="#women">WOMEN</a></li>
+        <li><a href="#men">MEN</a></li>
+        <li><a href="#jeans">JEANS</a></li>
+        <li><a href="#new">NEW</a></li>
+        <li><a href="#sale">SALE</a></li>
+        <li><a href="#style">STYLE</a></li>
+        <li><a href="#labels">LABELS WE LOVE</a></li>
+        <li><a href="#giftings">GIFTING</a></li>
+      </ul>
+    </div>
 
-    </body>
+    <div id="app"></div>
+    <script>
+      $(".proB").click(function() {
+        $(".tryP").toggle();
+      });
+
+      $(".shBut").click(function() {
+        $(".try").toggle();
+      });
+    </script>
+    <script src="./dist/bundle.js"></script>
+  </body>
+  <footer>
+    <img id="foot" src="https://i.imgur.com/LElqT81.png" />
+  </footer>
 </html>
