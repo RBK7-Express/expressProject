@@ -1,19 +1,11 @@
-// const cool = require("cool-ascii-faces");
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-// import Test from "./client/src/review/index.jsx";
 var app = express();
-// const pic = require("./nav");
 
-const URI = require("./config/keys").mongooURI;
+const URI =
+  "mongodb+srv://basima:basima@cluster0-stpym.mongodb.net/expressDB?retryWrites=true&w=majority";
 mongoose.connect(URI, { useNewUrlParser: true });
-
-var db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", function() {
-  console.log("we are connected");
-});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

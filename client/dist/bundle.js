@@ -23053,7 +23053,13 @@
 	                  { id: "cyr" },
 	                  _react2.default.createElement("br", null),
 	                  "A"
-	                )
+	                ),
+	                _react2.default.createElement("img", {
+	                  "class": "_1AJjL",
+	                  src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAVCAQAAACNxCRhAAABAUlEQVQ4y2NgAAFuBvn/JII/H29kMnAyMIH1M/AxaJGm/dXpQnsGYQY2BkaIAQIM+iTY/XPPFDYdBnEGLgZmMgx4e7MkgkGJQRBoO9T5JBjw78+JxaKGDJLAMGOB2U2CAZ8fd6QyqDAIMbAj202sAf+ubNKzYJBm4EW3mygDvr2ZXcygxiDCwIFpNxEG3D/g7sggC4xqVmx2EzDg1+e1zQyaDKLAJMOMWztOA56fjfNhkGfgRyQYEgz482P3ZPTkQoIB2JMLkQbgTi5EGYAvueAG/Aw6xCQX3ICXQYWY5IIbcDKIv90abE4oueAGLMDIEgBq5iQmyrABRqBGFnI1UwgADEvmQx8G6G4AAAAASUVORK5CYII=",
+	                  alt: "",
+	                  "aria-hidden": "true"
+	                })
 	              )
 	            );
 	          })
@@ -33875,6 +33881,12 @@
 	              "strike",
 	              null,
 	              "$24.90"
+	            ),
+	            " ",
+	            _react2.default.createElement(
+	              "span",
+	              { id: "enna" },
+	              "$9.90"
 	            )
 	          ),
 	          _react2.default.createElement(
