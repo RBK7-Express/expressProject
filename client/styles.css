@@ -58,7 +58,6 @@ li a:hover {
   background: #000;
 }
 
-/* ///// */
 .row:after {
   content: "";
   display: table;
@@ -81,7 +80,6 @@ li a:hover {
 * {
   box-sizing: border-box;
 }
-/* Right column */
 .rightcolumn {
   float: left;
   width: 35%;
@@ -89,7 +87,6 @@ li a:hover {
   margin-bottom: 10%;
 }
 
-/* //////////// */
 .images {
   margin-left: 235px;
   margin-top: -256px;
@@ -313,15 +310,7 @@ li a:hover {
   color: #000000;
   box-sizing: border-box;
 }
-/* #sspan {
-  display: inline-block;
-  font-size: 36px;
-  width: 20%;
-  height: 85%;
-  /* margin: 10px; */
-  /* border: 1px solid black; */
-  /* margin-bottom: 40%; */
-} */
+
 .row2{
   content: "";
   display: table;

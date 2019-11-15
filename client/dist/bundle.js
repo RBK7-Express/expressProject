@@ -33875,6 +33875,11 @@
 	              "strike",
 	              null,
 	              "$24.90"
+	            ),
+	            _react2.default.createElement(
+	              "span",
+	              { id: "enna" },
+	              "$9.90"
 	            )
 	          ),
 	          _react2.default.createElement(
