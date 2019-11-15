@@ -23028,19 +23028,32 @@
 	          null,
 	          this.state.reviews.map(function (item, i) {
 	            return _react2.default.createElement(
-	              "span",
-	              { className: "sspan", key: i },
-	              "\u2605\u2605\u2605\u2605\u2605",
-	              _react2.default.createElement("br", null),
-	              " ",
-	              item,
-	              _react2.default.createElement("br", null),
-	              _react2.default.createElement("img", { id: "forSpan", src: "https://i.ibb.co/NjV2vj7/Capture.png" }),
-	              _react2.default.createElement("img", { id: "wasHelp", src: "https://i.ibb.co/kmLrZvf/div.png" }),
+	              "div",
+	              { className: "row2" },
 	              _react2.default.createElement(
-	                "div",
-	                { id: "cyr" },
-	                "A"
+	                "span",
+	                { className: "column", key: i },
+	                "\u2605\u2605\u2605\u2605\u2605",
+	                _react2.default.createElement("br", null),
+	                " ",
+	                item,
+	                _react2.default.createElement("br", null),
+	                _react2.default.createElement(
+	                  "div",
+	                  { id: "forSpan" },
+	                  _react2.default.createElement("img", { src: "https://i.ibb.co/NjV2vj7/Capture.png" })
+	                ),
+	                _react2.default.createElement(
+	                  "div",
+	                  { id: "wasHelp" },
+	                  _react2.default.createElement("img", { src: "https://i.ibb.co/kmLrZvf/div.png" })
+	                ),
+	                _react2.default.createElement(
+	                  "div",
+	                  { id: "cyr" },
+	                  _react2.default.createElement("br", null),
+	                  "A"
+	                )
 	              )
 	            );
 	          })

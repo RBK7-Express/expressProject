@@ -60,14 +60,22 @@ class Test extends React.Component {
           {/* this.state.reviews */}
           {this.state.reviews.map((item, i) => {
             return (
-              <span className="sspan" key={i}>
-                ★★★★★
-                <br /> {item}
-                <br />
-                <img id="forSpan" src="https://i.ibb.co/NjV2vj7/Capture.png" />
-                <img id="wasHelp" src="https://i.ibb.co/kmLrZvf/div.png" />
-                <div id="cyr">A</div>
-              </span>
+              <div className="row2">
+                <span className="column" key={i}>
+                  ★★★★★
+                  <br /> {item}
+                  <br />
+                  <div id="forSpan">
+                    <img src="https://i.ibb.co/NjV2vj7/Capture.png" />
+                  </div>
+                  <div id="wasHelp">
+                    <img src="https://i.ibb.co/kmLrZvf/div.png" />
+                  </div>
+                  <div id="cyr">
+                    <br />A
+                  </div>
+                </span>
+              </div>
             );
           })}
         </div>
