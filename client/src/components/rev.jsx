@@ -22,7 +22,7 @@ class Test extends React.Component {
     console.log(id_);
     $.ajax({
       type: "GET",
-      url: "http://127.0.0.1:8000/id/?id=" + that.state.id,
+      url: "/id/?id=" + that.state.id,
       data: { id: id_ },
       // dataType: "application/json",
       success: function(data) {
@@ -40,22 +40,32 @@ class Test extends React.Component {
       fontSize: "30px",
       fontFamily: "Lucida Sans Unicode"
     };
-    var sty2 = {
-      width: "31%",
-      height: "350px",
-      margin: "10px",
-      border: "0.5px solid black"
-    };
 
     return (
-      <div>
-        <center>
-          <h3 style={sty}>What Others are Saying</h3>
+      <div id="allrev">
+        <br />
+        <br />
+        <br />
+        <br />
+        <center id="cen">
+          <h3 id="sty">What Others are Saying</h3>
         </center>
         <hr></hr>
-        <p>number of reviews reviews</p>
+        <span id="spancenter">
+          <span id="numofrev">★★★★★ {this.state.reviews.length} Reviews</span>
+          <span id="imgspan">
+            <img src="https://i.ibb.co/Bjz938z/las-d.png" />
+          </span>
+          <span id="rec">98% Recommended</span>
+        </span>
+
         <hr></hr>
-        <p>Most Recent Reviews</p>
+        <h3>Most Recent Reviews</h3>
+        <div>
+          <a id="writecomm" href="default.asp" target="_blank">
+            READ ALL REVIEWS
+          </a>
+        </div>
         <div>
           {/* this.state.reviews */}
           {this.state.reviews.map((item, i) => {
@@ -66,7 +76,7 @@ class Test extends React.Component {
                   <br /> {item}
                   <br />
                   <div id="forSpan">
-                    <img src="https://i.ibb.co/NjV2vj7/Capture.png" />
+                    <img src="https://i.ibb.co/Bjz938z/las-d.png" />
                   </div>
                   <div id="wasHelp">
                     <img src="https://i.ibb.co/kmLrZvf/div.png" />
@@ -74,10 +84,19 @@ class Test extends React.Component {
                   <div id="cyr">
                     <br />A
                   </div>
+                  <img
+                    class="_1AJjL"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAVCAQAAACNxCRhAAABAUlEQVQ4y2NgAAFuBvn/JII/H29kMnAyMIH1M/AxaJGm/dXpQnsGYQY2BkaIAQIM+iTY/XPPFDYdBnEGLgZmMgx4e7MkgkGJQRBoO9T5JBjw78+JxaKGDJLAMGOB2U2CAZ8fd6QyqDAIMbAj202sAf+ubNKzYJBm4EW3mygDvr2ZXcygxiDCwIFpNxEG3D/g7sggC4xqVmx2EzDg1+e1zQyaDKLAJMOMWztOA56fjfNhkGfgRyQYEgz482P3ZPTkQoIB2JMLkQbgTi5EGYAvueAG/Aw6xCQX3ICXQYWY5IIbcDKIv90abE4oueAGLMDIEgBq5iQmyrABRqBGFnI1UwgADEvmQx8G6G4AAAAASUVORK5CYII="
+                  ></img>
                 </span>
               </div>
             );
           })}
+        </div>
+        <div>
+          <a id="more" href="default.asp" target="_blank">
+            READ ALL REVIEWS
+          </a>
         </div>
       </div>
     );

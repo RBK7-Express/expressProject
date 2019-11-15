@@ -104,7 +104,13 @@
 	          { className: "rightcolumn" },
 	          _react2.default.createElement(_sideBar2.default, null)
 	        ),
-	        _react2.default.createElement(_rev2.default, null)
+	        _react2.default.createElement(
+	          "div",
+	          { id: "mine" },
+	          _react2.default.createElement("br", null),
+	          _react2.default.createElement("br", null),
+	          _react2.default.createElement(_rev2.default, null)
+	        )
 	      );
 	    }
 	  }]);
@@ -22973,7 +22979,7 @@
 	      console.log(id_);
 	      _jquery2.default.ajax({
 	        type: "GET",
-	        url: "http://127.0.0.1:8000/id/?id=" + that.state.id,
+	        url: "/id/?id=" + that.state.id,
 	        data: { id: id_ },
 	        // dataType: "application/json",
 	        success: function success(data) {
@@ -22992,36 +22998,59 @@
 	        fontSize: "30px",
 	        fontFamily: "Lucida Sans Unicode"
 	      };
-	      var sty2 = {
-	        width: "31%",
-	        height: "350px",
-	        margin: "10px",
-	        border: "0.5px solid black"
-	      };
 	
 	      return _react2.default.createElement(
 	        "div",
-	        null,
+	        { id: "allrev" },
+	        _react2.default.createElement("br", null),
+	        _react2.default.createElement("br", null),
+	        _react2.default.createElement("br", null),
+	        _react2.default.createElement("br", null),
 	        _react2.default.createElement(
 	          "center",
-	          null,
+	          { id: "cen" },
 	          _react2.default.createElement(
 	            "h3",
-	            { style: sty },
+	            { id: "sty" },
 	            "What Others are Saying"
 	          )
 	        ),
 	        _react2.default.createElement("hr", null),
 	        _react2.default.createElement(
-	          "p",
-	          null,
-	          "number of reviews reviews"
+	          "span",
+	          { id: "spancenter" },
+	          _react2.default.createElement(
+	            "span",
+	            { id: "numofrev" },
+	            "\u2605\u2605\u2605\u2605\u2605 ",
+	            this.state.reviews.length,
+	            " Reviews"
+	          ),
+	          _react2.default.createElement(
+	            "span",
+	            { id: "imgspan" },
+	            _react2.default.createElement("img", { src: "https://i.ibb.co/Bjz938z/las-d.png" })
+	          ),
+	          _react2.default.createElement(
+	            "span",
+	            { id: "rec" },
+	            "98% Recommended"
+	          )
 	        ),
 	        _react2.default.createElement("hr", null),
 	        _react2.default.createElement(
-	          "p",
+	          "h3",
 	          null,
 	          "Most Recent Reviews"
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          null,
+	          _react2.default.createElement(
+	            "a",
+	            { id: "writecomm", href: "default.asp", target: "_blank" },
+	            "READ ALL REVIEWS"
+	          )
 	        ),
 	        _react2.default.createElement(
 	          "div",
@@ -23041,7 +23070,7 @@
 	                _react2.default.createElement(
 	                  "div",
 	                  { id: "forSpan" },
-	                  _react2.default.createElement("img", { src: "https://i.ibb.co/NjV2vj7/Capture.png" })
+	                  _react2.default.createElement("img", { src: "https://i.ibb.co/Bjz938z/las-d.png" })
 	                ),
 	                _react2.default.createElement(
 	                  "div",
@@ -23053,10 +23082,23 @@
 	                  { id: "cyr" },
 	                  _react2.default.createElement("br", null),
 	                  "A"
-	                )
+	                ),
+	                _react2.default.createElement("img", {
+	                  "class": "_1AJjL",
+	                  src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAVCAQAAACNxCRhAAABAUlEQVQ4y2NgAAFuBvn/JII/H29kMnAyMIH1M/AxaJGm/dXpQnsGYQY2BkaIAQIM+iTY/XPPFDYdBnEGLgZmMgx4e7MkgkGJQRBoO9T5JBjw78+JxaKGDJLAMGOB2U2CAZ8fd6QyqDAIMbAj202sAf+ubNKzYJBm4EW3mygDvr2ZXcygxiDCwIFpNxEG3D/g7sggC4xqVmx2EzDg1+e1zQyaDKLAJMOMWztOA56fjfNhkGfgRyQYEgz482P3ZPTkQoIB2JMLkQbgTi5EGYAvueAG/Aw6xCQX3ICXQYWY5IIbcDKIv90abE4oueAGLMDIEgBq5iQmyrABRqBGFnI1UwgADEvmQx8G6G4AAAAASUVORK5CYII="
+	                })
 	              )
 	            );
 	          })
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          null,
+	          _react2.default.createElement(
+	            "a",
+	            { id: "more", href: "default.asp", target: "_blank" },
+	            "READ ALL REVIEWS"
+	          )
 	        )
 	      );
 	    }
@@ -33738,7 +33780,7 @@
 	      console.log(id_);
 	      _jquery2.default.ajax({
 	        type: "GET",
-	        url: "http://127.0.0.1:8000/id/?id=" + that.state.id,
+	        url: "/id/?id=" + that.state.id,
 	        data: { id: id_ },
 	        //   dataType: "application/json",
 	        success: function success(data) {
@@ -33875,6 +33917,12 @@
 	              "strike",
 	              null,
 	              "$24.90"
+	            ),
+	            " ",
+	            _react2.default.createElement(
+	              "span",
+	              { id: "enna" },
+	              "$9.90"
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -34554,7 +34602,7 @@
 	      console.log(id_);
 	      _jquery2.default.ajax({
 	        type: "GET",
-	        url: "http://127.0.0.1:8000/id/?id=" + that.state.id,
+	        url: "/id/?id=" + that.state.id,
 	        data: { id: id_ },
 	        success: function success(data) {
 	          that.setState({
@@ -34578,23 +34626,37 @@
 	        { className: "wholeProject" },
 	        _react2.default.createElement(
 	          "div",
-	          null,
-	          " ",
+	          { className: "nameSection" },
 	          _react2.default.createElement(
-	            "p",
-	            null,
+	            "h1",
+	            { id: "itemname" },
 	            this.state.name
-	          ),
-	          " "
+	          )
 	        ),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "price" },
 	          _react2.default.createElement(
-	            "p",
+	            "span",
 	            null,
 	            this.state.price,
 	            " "
+	          ),
+	          _react2.default.createElement(
+	            "span",
+	            { id: "revstart" },
+	            "\u2605\u2605\u2605\u2605\u2605 Reviews"
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            null,
+	            _react2.default.createElement("img", { id: "imgcolor", src: "https://i.ibb.co/NLTs0Yp/coloc.png" })
+	          ),
+	          _react2.default.createElement("hr", null),
+	          _react2.default.createElement(
+	            "div",
+	            null,
+	            _react2.default.createElement("img", { id: "imgcolor2", src: "https://i.ibb.co/1J0xrhs/size.png" })
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -34603,133 +34665,41 @@
 	          "Buy 1, Get 1 50% Off"
 	        ),
 	        _react2.default.createElement("hr", null),
+	        _react2.default.createElement("div", null),
+	        _react2.default.createElement(
+	          "button",
+	          { className: "bag" },
+	          "ADD TO BAG"
+	        ),
+	        " ",
+	        _react2.default.createElement("br", null),
+	        _react2.default.createElement("br", null),
+	        " ",
 	        _react2.default.createElement(
 	          "div",
-	          { className: "selectSize" },
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Select Size:"
-	          ),
+	          { className: "AverDiv" },
+	          " ",
+	          "Average Fit based on",
 	          " ",
 	          _react2.default.createElement(
-	            "button",
-	            null,
-	            "regular"
-	          ),
-	          " ",
-	          _react2.default.createElement(
-	            "button",
-	            null,
-	            "tall"
+	            "a",
+	            { id: "ancorsidebar", href: "default.asp", target: "_blank" },
+	            "user reviews:"
 	          )
 	        ),
 	        _react2.default.createElement(
 	          "div",
 	          null,
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            this.state.sizes,
-	            " "
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Recommend My Size"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "button",
-	          { className: "bag" },
-	          "Add to Bag"
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "AverDiv" },
-	          " Average Fit based on "
+	          _react2.default.createElement("img", { src: "https://i.ibb.co/Bjz938z/las-d.png" })
 	        ),
 	        _react2.default.createElement("hr", null),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "pro" },
 	          _react2.default.createElement(
-	            "button",
-	            { className: "proB" },
+	            "b",
+	            null,
 	            "Product Details"
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "tryP" },
-	            _react2.default.createElement(
-	              "div",
-	              { id: "innerText" },
-	              _react2.default.createElement(
-	                "p",
-	                { className: "bodySecondary" },
-	                "Your favorite casual tee now amped up with an unbelievably soft fit and feel. The classic crew neck and hue make it extremely versatile, so get ready to enjoy this one's all-day comfort all year long."
-	              )
-	            ),
-	            _react2.default.createElement(
-	              "section",
-	              { id: "test" },
-	              _react2.default.createElement(
-	                "div",
-	                { className: "bob bodyPrimary" },
-	                _react2.default.createElement(
-	                  "ul",
-	                  null,
-	                  _react2.default.createElement(
-	                    "li",
-	                    null,
-	                    "Moisture-wicking"
-	                  ),
-	                  _react2.default.createElement(
-	                    "li",
-	                    null,
-	                    "Supersoft, stretch fabric"
-	                  ),
-	                  _react2.default.createElement(
-	                    "li",
-	                    null,
-	                    "Short sleeves; Straight hem"
-	                  ),
-	                  _react2.default.createElement(
-	                    "li",
-	                    null,
-	                    "Imported"
-	                  ),
-	                  _react2.default.createElement(
-	                    "li",
-	                    null,
-	                    "Crew neck, tagless"
-	                  ),
-	                  _react2.default.createElement(
-	                    "li",
-	                    null,
-	                    "Cotton/Modal/Spandex"
-	                  ),
-	                  _react2.default.createElement(
-	                    "li",
-	                    null,
-	                    "Machine wash"
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "Ywr0X" },
-	              _react2.default.createElement(
-	                "span",
-	                null,
-	                _react2.default.createElement(
-	                  "button",
-	                  { type: "button", className: "linkDark" },
-	                  "Size Chart"
-	                )
-	              )
-	            )
 	          )
 	        ),
 	        _react2.default.createElement("hr", null),
@@ -34737,34 +34707,9 @@
 	          "div",
 	          null,
 	          _react2.default.createElement(
-	            "button",
-	            { className: "shBut" },
+	            "b",
+	            null,
 	            "Shipping and Returns"
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "try" },
-	            _react2.default.createElement(
-	              "p",
-	              { className: "shipP" },
-	              "We ship anywhere in the U.S. and to over 55 international destinations."
-	            ),
-	            _react2.default.createElement(
-	              "p",
-	              { className: "shipP" },
-	              "Everyday free standard shipping on orders $50+ placed online at Express.com for U.S. or Canada."
-	            ),
-	            _react2.default.createElement(
-	              "p",
-	              { className: "shipP" },
-	              "Simple Returns. Up to 60 days. Get the full details on",
-	              _react2.default.createElement(
-	                "a",
-	                { href: "/service/custserv.jsp?name=ReturnsMain" },
-	                "Returns & Exchanges"
-	              ),
-	              ". Excludes Final Sale items ending in .97 cents."
-	            )
 	          )
 	        ),
 	        _react2.default.createElement("hr", null),
@@ -34777,9 +34722,18 @@
 	            "Check Availability at Stores Near You"
 	          ),
 	          _react2.default.createElement(
-	            "button",
-	            { className: "avilBut" },
-	            "Change Store"
+	            "span",
+	            null,
+	            _react2.default.createElement(
+	              "a",
+	              { id: "changerstore", href: "default.asp", target: "_blank" },
+	              "change Store"
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            null,
+	            _react2.default.createElement("br", null)
 	          )
 	        ),
 	        _react2.default.createElement("hr", null),
