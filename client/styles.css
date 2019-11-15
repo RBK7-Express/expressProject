@@ -187,6 +187,7 @@ li a:hover {
 }
 #enna {
   color: red;
+ 
 }
 #photoBar {
   width: 50%;
@@ -331,12 +332,30 @@ li a:hover {
 .column {
   margin-bottom: 40%;
   margin: 15px;
-  border: 1px solid black;
+  border: 0.1px solid black;
   float: left;
   width: 25%;
   padding: 10px;
   height: 300px; 
   margin-bottom: 10%;
+}
+._1AJjL{
+  -webkit-font-smoothing: antialiased;
+list-style-type: none;
+letter-spacing: normal;
+word-spacing: normal;
+white-space: normal;
+text-align: left;
+direction: ltr;
+font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+font-size: inherit;
+box-sizing: border-box;
+position: absolute;
+bottom: 91px;
+left: 25%;
+width: 32px;
+height: 21px;
+display: block;
 }
 #sspann {
   width: 80%;

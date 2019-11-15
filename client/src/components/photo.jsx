@@ -118,8 +118,7 @@ class App extends React.Component {
               Shirt
               <br />
             </u>
-            <strike>$24.90</strike>
-            {/* <span id="enna">$9.90</span> */}
+            <strike>$24.90</strike> <span id="enna">$9.90</span>
           </h1>
           <h1 className="text222">
             <u>
