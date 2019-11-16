@@ -1,3 +1,6 @@
+
+//
+//
 import React from "react";
 import ReactDOM from "react-dom";
 import $ from "jquery";
@@ -65,6 +68,17 @@ class Side extends React.Component {
           {/* <p>{this.state.sizes} </p>
           <p>Recommend My Size</p> */}
         </div>
+
+                 {/* ////////color Section////// */}
+ <div className="colorSection">{this.state.colors.map((item,i)=>{
+             return(
+                  <span key={i}>
+                    <img src={item}></img>
+                  </span>
+                  
+             )
+           })}
+            </div>
         {/* add bag section  */}
         <button className="bag">ADD TO BAG</button> <br />
         {/* Average Section  */}
@@ -93,15 +107,10 @@ class Side extends React.Component {
         {/* avilability Section  */}
         <section className="Avilability">
           <span className="check">Check Availability at Stores Near You</span>
-          <span>
-            <a id="changerstore" href="default.asp" target="_blank">
-              change Store
-            </a>
-          </span>
-
           <div>
-            <br />
+          <br/>
           </div>
+          <button className="avilBut">Change Store</button>
         </section>
         <hr></hr>
         {/* gift section */}
