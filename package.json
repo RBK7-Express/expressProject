@@ -2,25 +2,34 @@
   "name": "express-project",
   "version": "1.0.0",
   "description": "green field",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/index.js",
-    "dev-react": "webpack -d --watch"
+    "start": "node server.js",
+    "dev-react": "webpack -d --watch",
+    "build": "webpack -p --config ./webpack.config.js --watch --display-error-details",
+    "watch": "webpack -d --watch --config ./webpack.config.js --display-error-details",
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js"
   },
   "keywords": [],
   "author": "",
-  "license": "Nobody may use this except Hack Reactor",
   "dependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.17.0",
     "body-parser": "^1.15.2",
+    "cool-ascii-faces": "^1.3.4",
     "express": "^4.14.0",
     "jquery": "^3.1.1",
-    "mongoose": "^4.13.19",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.8",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "request": "^2.75.0"
+    "request": "^2.75.0",
+    "react-gesture-gallery": "^1.1.0",
+    "react-image-magnifiers": "^1.2.1",
+    "react-image-slider": "^0.1.0",
+    "react-responsive-carousel": "^3.1.51",
+    "react-simple-image-slider": "^1.0.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.6.3",
@@ -29,5 +38,14 @@
     "babel-preset-react": "^6.16.0",
     "nodemon": "^1.11.0",
     "webpack": "^1.15.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basima1994/expressProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Basima1994/expressProject/issues"
+  },
+  "homepage": "https://github.com/Basima1994/expressProject#readme",
+  "license": "ISC"
 }
